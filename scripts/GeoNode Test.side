@@ -1,0 +1,157 @@
+{
+  "id": "d7e8d642-241d-479a-a8e5-d9406f8e90d9",
+  "name": "GeoNode Test",
+  "url": "http://testing.geonode.kartoza.com",
+  "tests": [
+    {
+      "id": "101768ee-1c00-4e04-93ab-34a04d3aa605",
+      "name": "Login",
+      "commands": [
+        {
+          "id": "efc79734-503c-4aa8-a285-dba08597965e",
+          "comment": "",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "id": "633a3b93-576f-4e33-b84f-4c3a7b58778c",
+          "comment": "",
+          "command": "clickAt",
+          "target": "//a[contains(text(),'Sign in')]",
+          "value": "51,44"
+        },
+        {
+          "id": "e8f56746-832d-480f-82a1-74092a84bfd1",
+          "comment": "",
+          "command": "clickAt",
+          "target": "id=id_username",
+          "value": "113,16"
+        },
+        {
+          "id": "9a99eca1-e07b-47e7-9ac1-c39ff072e71d",
+          "comment": "",
+          "command": "type",
+          "target": "id=id_username",
+          "value": "admin"
+        },
+        {
+          "id": "585572dc-b697-4306-9f70-16bd77e284ab",
+          "comment": "",
+          "command": "clickAt",
+          "target": "css=div.modal-body",
+          "value": "167,125"
+        },
+        {
+          "id": "ba6763f5-4d41-4610-82fe-4273723be502",
+          "comment": "",
+          "command": "clickAt",
+          "target": "id=id_password",
+          "value": "132,21"
+        },
+        {
+          "id": "c0e29d22-bd84-4f92-b10e-701aeae17114",
+          "comment": "",
+          "command": "clickAt",
+          "target": "id=id_password",
+          "value": "132,21"
+        },
+        {
+          "id": "4f80c70f-42bd-440b-a1da-ca5753cb8d5d",
+          "comment": "",
+          "command": "type",
+          "target": "id=id_password",
+          "value": "admin"
+        },
+        {
+          "id": "8aa30e75-168c-4750-973d-64213d3aa37c",
+          "comment": "",
+          "command": "clickAt",
+          "target": "css=input[type=\"checkbox\"]",
+          "value": "5,4"
+        },
+        {
+          "id": "4064b43f-de5f-495a-9b66-3734e1027457",
+          "comment": "",
+          "command": "clickAt",
+          "target": "//button[@type='submit']",
+          "value": "110,26"
+        },
+        {
+          "id": "49398ca2-ba4e-4059-8e9b-9ca923ca62a2",
+          "comment": "",
+          "command": "assertText",
+          "target": "css=p.success",
+          "value": "Successfully signed in as admin."
+        },
+        {
+          "id": "16c482aa-b08f-416e-b2c8-7f358428a91b",
+          "comment": "",
+          "command": "assertText",
+          "target": "css=a.dropdown-toggle.avatar",
+          "value": "admin"
+        },
+        {
+          "id": "f641082d-4f18-42ef-ae37-3f597afdb835",
+          "comment": "",
+          "command": "clickAt",
+          "target": "css=a.dropdown-toggle.avatar",
+          "value": "105,42"
+        },
+        {
+          "id": "64ddcdf0-587c-4109-867b-de880e294787",
+          "comment": "",
+          "command": "clickAt",
+          "target": "//a[contains(text(),'Logout')]",
+          "value": "44,17"
+        },
+        {
+          "id": "97baf3f7-b716-4c5a-8e7a-724e30e56a7f",
+          "comment": "",
+          "command": "clickAt",
+          "target": "css=button.btn.btn-primary",
+          "value": "38,21"
+        },
+        {
+          "id": "5515de2c-dcdf-41ba-aa9a-532caf248312",
+          "comment": "",
+          "command": "assertText",
+          "target": "css=p.success",
+          "value": "You have signed out."
+        }
+      ]
+    },
+    {
+      "id": "4f3fe2f4-9763-4afe-b8a5-f23e4b6b043d",
+      "name": "Logout",
+      "commands": [
+        {
+          "id": "2530497e-0a27-4aa2-8d05-42d2808084a9",
+          "comment": "",
+          "command": "addSelection",
+          "target": "",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "e2561eca-9e78-4606-bb70-f1276254b9b3",
+      "name": "Default Suite",
+      "tests": [
+        "101768ee-1c00-4e04-93ab-34a04d3aa605"
+      ]
+    },
+    {
+      "id": "8d4c4b43-d541-4eae-b8d2-f42423218ea1",
+      "name": "Suite 1",
+      "tests": [
+        "4f3fe2f4-9763-4afe-b8a5-f23e4b6b043d"
+      ]
+    }
+  ],
+  "urls": [
+    "http://testing.geonode.kartoza.com"
+  ]
+}
