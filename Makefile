@@ -1,6 +1,11 @@
 up:
 	docker-compose up -d firefox
+
+up-debug:
 	docker-compose up -d firefox-debug
+
+test:
+	cd tests; python -m unittest discover
 
 down:
 	docker-compose down
